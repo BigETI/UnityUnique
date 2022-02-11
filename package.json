@@ -1,0 +1,17 @@
+{
+    "name": "com.bigeti.unique",
+    "version": "1.0.0",
+    "displayName": "Unity Unique",
+    "description": "This package enables you to have uniquely identifiable game objects.",
+    "dependencies": {},
+    "keywords": [
+        "guid",
+        "unique",
+        "unity"
+    ],
+    "author": {
+        "name": "Ethem Kurt",
+        "email": "bigeti.ethem@gmail.com",
+        "url": "https://bigeti.de/"
+    }
+}
