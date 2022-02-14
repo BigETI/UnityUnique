@@ -1,6 +1,6 @@
 {
     "name": "com.bigeti.unique",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Unity Unique",
     "description": "This package enables you to have uniquely identifiable game objects.",
     "dependencies": {},

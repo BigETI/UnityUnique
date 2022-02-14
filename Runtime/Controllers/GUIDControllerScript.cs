@@ -112,16 +112,20 @@ namespace UnityUnique.Controllers
                     is_checking = false;
                     for (int scene_index = 0; (scene_index < SceneManager.sceneCount) && !is_checking; scene_index++)
                     {
-                        SceneManager.GetSceneAt(scene_index).GetRootGameObjects(rootGameObjects);
-                        foreach (GameObject root_game_object in rootGameObjects)
+                        Scene scene = SceneManager.GetSceneAt(scene_index);
+                        if (scene.isLoaded)
                         {
-                            is_checking = ValidateGUIDs(root_game_object.transform);
-                            if (is_checking)
+                            scene.GetRootGameObjects(rootGameObjects);
+                            foreach (GameObject root_game_object in rootGameObjects)
                             {
-                                break;
+                                is_checking = ValidateGUIDs(root_game_object.transform);
+                                if (is_checking)
+                                {
+                                    break;
+                                }
                             }
+                            rootGameObjects.Clear();
                         }
-                        rootGameObjects.Clear();
                     }
                 }
             }
